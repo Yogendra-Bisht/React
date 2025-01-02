@@ -9,11 +9,15 @@ function App() {
   
   let addone=()=>{
     
-    setcount(count+1);
+    if(count<20){
+      setcount(count+1);
+    }
   }
   let removeone=()=>{
     
-    setcount(count-1);
+    if(count > -10){
+      setcount(count-1);
+    }
   }
   
 
