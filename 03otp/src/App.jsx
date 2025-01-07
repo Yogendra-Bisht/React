@@ -3,19 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [Otp, setCount] = useState()
-  function createOtp(){
-    let otp = Math.random()*100000
-    let Otp = Math.floor(otp)
-    // console.log(`Your OTP is : ${Otp}`);
-    return Otp
-    }
+function App(){
+  const [otp, setotp] = useState("");
+  function createotp(){
+    const otpValue = Math.floor(Math.random() * 100000);
+    setotp(otpValue)
+  }
+
+
     // createOtp();
 
   return (
     <>
-    <button onClick={createOtp}>Your otp is : {Otp}</button>
+    <h3>Click the button to generate your OTP:</h3>
+      <button onClick={createotp}>Generate OTP</button>
+      <p>Your OTP is: <strong>{otp}</strong></p> {/* Display the generated OTP */}
       
     </>
   )
