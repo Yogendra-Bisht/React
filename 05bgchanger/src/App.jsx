@@ -5,7 +5,7 @@ import './App.css'
 import Button from './components/Button'
 
 
-function App() {
+function App({}) {
   const [bgcolor, setBgColor] = useState('red')
   // console.log(props);
   const handleColorChange = (color) => {
